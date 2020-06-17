@@ -1,0 +1,4 @@
+.imagelink:not(.nohover):hover{
+    background-color: blue !important;
+  }
+  
