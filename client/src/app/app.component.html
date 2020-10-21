@@ -2,16 +2,37 @@
   <div class="container">
     <div id="navbar-main">
       <ul class="nav navbar-nav">
-        <li><a class="navbar-brand" routerLink="/"><img src="../../assets/plane-9931.png" alt="Logo" style="width:130px">APOS <em style="font-size: 12px;">ThunderCloud</em>&nbsp;<small>&reg;</small><br><br>
-          <!--<label style="margin-left: 70px; color: cadetblue;">Aircraft Parts Order System</label>-->
-        </a></li>
-        <!--<li><a routerLink="/">Home</a></li>-->
-      </ul>
+        <li><a class="navbar-brand" routerLink="/"><img src="../../assets/plane-9931.png" alt="Logo" style="width:130px">APOS <em style="font-size: 12px;">ThunderCloud</em>&nbsp;<small>&reg;</small>
+          <br><br></a>
+        </li>
+      </ul><br><br>
       <ul class="nav navbar-nav navbar-right">
         <li *ngIf="!auth.isLoggedIn()"><a routerLink="/login">Sign in</a></li>
-        <li *ngIf="auth.isLoggedIn()">
+
+
+        <!--<li *ngIf="auth.isLoggedIn()">
           <a routerLink="/profile">{{ auth.getUserDetails()?.name }}</a>
+        </li>-->
+
+
+
+        <li *ngIf="auth.isLoggedIn()">
+
+          <!--<button type="button" class="btn btn-info">Dark</button>-->
+
+          <a routerLink="/profile">My Parts</a>
         </li>
+        <li *ngIf="auth.isLoggedIn()">
+          <a routerLink="/profile">Document Types</a>
+        </li>
+        <li *ngIf="auth.isLoggedIn()">
+          <a routerLink="/profile">Service Information Letters</a>
+        </li>
+        
+        <li *ngIf="auth.isLoggedIn()">
+          <!--<a routerLink="/profile">{{ auth.getUserDetails()?.name }}</a>-->
+        </li>
+        
         <li *ngIf="auth.isLoggedIn()"><a (click)="auth.logout()">Logout</a></li>
       </ul>
     </div>
