@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const orderSchema = new mongoose.Schema({
+const customerSchema = new mongoose.Schema({
   custname: {
     type: String,
     required: true
@@ -9,27 +9,26 @@ const orderSchema = new mongoose.Schema({
     type: String,
     required: true
   },
-  ordernumber: {
+  phone: {
       type: String,
       required: true
   },
-  partnumber: {
-    type: String,
-    required: true
-  },
-  price: {
-    type: String,
-    required: true
-  },
-  items: {
-    type: String,
-    count: Number,
-    required: true
-  },
-  orderdate: {
+  city: {
     type: String,
     required: false
+  },
+  state: {
+    type: String,
+    required: true
+  },
+  zipcode: {
+    type: String,
+    required: false
+  },
+  country: {
+      type: String,
+      required: true
   }
 });
 
-mongoose.model('Order', orderSchema);
+mongoose.model('Customer', customerSchema);
