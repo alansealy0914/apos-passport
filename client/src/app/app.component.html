@@ -8,35 +8,155 @@
       </ul><br><br>
       <ul class="nav navbar-nav navbar-right">
         <li *ngIf="!auth.isLoggedIn()"><a routerLink="/login">Sign in</a></li>
-
-
         <!--<li *ngIf="auth.isLoggedIn()">
           <a routerLink="/profile">{{ auth.getUserDetails()?.name }}</a>
         </li>-->
 
-
-
         <li *ngIf="auth.isLoggedIn()">
-
-          <!--<button type="button" class="btn btn-info">Dark</button>-->
-
-          <a routerLink="/profile">My Parts</a>
+          <button type="button" class="btn btn-primary" style="margin:5px; box-shadow: 0px 8px 16px 0px rgba(14, 13, 13, 0.342)">
+            <a routerLink="/profile" style="color:aliceblue">My Parts</a>
+          </button>
         </li>
         <li *ngIf="auth.isLoggedIn()">
-          <a routerLink="/profile">Document Types</a>
+          <button type="button" class="btn btn-primary" style="margin:5px; box-shadow: 0px 8px 16px 0px rgba(14, 13, 13, 0.342)">
+            <a routerLink="/" style="color:aliceblue">Document Types</a>
+          </button>
         </li>
         <li *ngIf="auth.isLoggedIn()">
-          <a routerLink="/profile">Service Information Letters</a>
+          <button type="button" class="btn btn-primary" style="margin:5px; box-shadow: 0px 8px 16px 0px rgba(14, 13, 13, 0.342)">
+            <a routerLink="/" style="color:aliceblue">Service Information Letters</a>
+          </button>
         </li>
-        
         <li *ngIf="auth.isLoggedIn()">
-          <!--<a routerLink="/profile">{{ auth.getUserDetails()?.name }}</a>-->
+         <a routerLink="/profile" style="color:cadetblue">{{ auth.getUserDetails()?.name }}</a>
         </li>
-        
-        <li *ngIf="auth.isLoggedIn()"><a (click)="auth.logout()">Logout</a></li>
+        <li *ngIf="auth.isLoggedIn()">
+          <a (click)="auth.logout()" style="color:cadetblue">Logout</a>
+        </li>
       </ul>
     </div>
   </div>
 </div>
+
+<!---- from Navgation 
+
+<nav class="navbar navbar-expand-sm bg-transparent text-dark" style="border: none">
+  <div class="container-fluid">
+    <div class="navbar navbar">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="/"><img src="../../assets/plane-9931.png" alt="Logo" style="width:130px; margin-top: 10px">APOS <em style="font-size: 12px;">ThunderCloud</em><small>&reg;</small>
+            <label style="margin-left: 70px; color: cadetblue;">Aircraft Parts Order System</label>
+          </a>
+        </div>
+        <ul class="nav navbar-nav">
+          <li *ngIf="loginService.isUserLoggedIn()" class="dropdown">
+            <a class="dropdown-toggle btn btn-secondary btn-sm" data-toggle="dropdown" href="#" style="box-shadow: 0px 8px 16px 0px rgba(14, 13, 13, 0.342); font-size: 12px">My Parts
+            <span class="caret"></span></a>
+            <ul class="dropdown-menu bg-secondary">
+              <li><i class="text-white text m-4" style="font-size: 12px">&nbsp;   All My Parts</i></li> 
+             
+              <i class="text-white" style="font-size: 11px">&nbsp;   ----------------------------------</i>
+              <li><a class="dropdown-item text-white" href="#!/products/1" style="font-size: 12px;">SkyTec Starter</a></li>
+              <li><a class="dropdown-item text-white" href="#!/products/2" style="font-size: 12px;">FG-73R5</a></li>
+              <li><a class="dropdown-item text-white" href="#!/products/3" style="font-size: 12px;">BEC AR6201-022</a></li>
+              <li><a class="dropdown-item text-white" href="#!/products/4" style="font-size: 12px;">EFL M4360A</a></li>
+              <li><a href="/"><i class="text-white text m-4" style="font-size: 11px">&nbsp;   more...</i></a></li> 
+              <i class="text-white" style="font-size: 11px">&nbsp;   ----------------------------------</i>
+              <li><a class="dropdown-item text-white" href="#!/customers/1" style="font-size: 12px;">Customer Profile</a></li>
+            </ul>
+          </li>
+          &nbsp;&nbsp;&nbsp;
+          <li *ngIf="loginService.isUserLoggedIn()" class="dropdown">
+            <a class="dropdown-toggle btn btn-secondary btn-sm" data-toggle="dropdown" href="#" style="box-shadow: 0px 8px 16px 0px rgba(14, 13, 13, 0.342); font-size: 12px">Document Types
+            <span class="caret"></span></a>
+            <ul class="dropdown-menu bg-secondary">
+              <li><a class="dropdown-item text-white" routerLink="/atp" style="font-size: 12px;">Acceptance Test Procedure (12)</a></li>
+              <li><a class="dropdown-item text-white" routerLink="/cmm" style="font-size: 12px;">Component Maint Manual (10)</a></li>
+              <li><a class="dropdown-item text-white" routerLink="/owd" style="font-size: 12px;">Outline/Wiring Diagram (6)</a></li>
+              <li><a class="dropdown-item text-white" routerLink="/owd" style="font-size: 12px;">Service Bulletin (2)</a></li>
+              <li><a class="dropdown-item text-white" routerLink="/owd" style="font-size: 12px;">Parts List (1)</a></li>
+              <li><a class="dropdown-item text-white" routerLink="/owd" style="font-size: 12px;">Pilot Guide (1)</a></li>
+              <li><a class="dropdown-item text-white" routerLink="/owd" style="font-size: 12px;">Installation Manual (6)</a></li>
+              <li><a class="dropdown-item text-white" routerLink="/owd" style="font-size: 12px;">Service Information Letters (2)</a></li>
+              <li><a class="dropdown-item text-white" routerLink="/owd" style="font-size: 12px;">more...</a></li>
+            </ul>
+          </li>
+          &nbsp;&nbsp;&nbsp;
+          <li><button *ngIf="loginService.isUserLoggedIn()" type="button" class="btn btn-link" routerLink="/sils">Service Information Letters</button></li>
+
+        <li><a *ngIf="!loginService.isUserLoggedIn()" routerLink="/login" class="nav-link"><i class="fa fa-user-circle text-secondary" style="font-size:20px"></i>&nbsp;Login</a></li>
+        <li><a *ngIf="loginService.isUserLoggedIn()" routerLink="/logout" class="nav-link"><span><i class="text-secondary fa fa-user-circle" style="font-size:20px"></i>&nbsp;LogOut</span></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>-->
+
+
+
+
+
+
+
+
+ <!--<li><a class="dropdown-item text-white" href="#!/customers/1" style="font-size: 12px;">All My Parts</a></li>-->
+
+<!--<div class="container-fluid">-->
+    <!--<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <span style="margin-left: 50px">
+        <ul class="nav navbar-nav">
+          <li>
+            <div *ngIf="loginService.isUserLoggedIn()" class="dropdown">
+              <button class="btn btn-sm btn-info dropdown-toggle" style="box-shadow: 0px 8px 16px 0px rgba(14, 13, 13, 0.342); font-size: 12px"  type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                My Parts
+              </button>
+              <div class="dropdown-menu bg-secondary" style="font-size: 11px" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item text-white" href="#!/products/2">All My Parts</a>
+                <a class="dropdown-item text-white" href="#!/customers/1">G7404-124-01</a>
+                <a class="dropdown-item text-white" href="#!/customers/2">G7404-124-02</a>
+                <a class="dropdown-item text-white" href="#!/customers/4">G7404-124-04</a>
+                <a class="dropdown-item text-white" href="#!/customers/6">G7507-124-06</a>
+                <a class="dropdown-item text-white" href="#!/customers/10">G7904-124-10</a>
+                <a class="dropdown-item text-white" href="#!/customers/12">G8104-124-12</a>
+              </div>
+            </div>
+        </li>
+
+        <li style="margin-left: 30px">&nbsp;
+          <div *ngIf="loginService.isUserLoggedIn()" class="dropdown">
+            <button class="btn btn-secondary btn-sm dropdown-toggle" style="box-shadow: 0px 8px 16px 0px rgba(14, 13, 13, 0.342); font-size: 12px" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Document Types
+            </button>
+
+            <div class="dropdown-menu bg-secondary" style="font-size: 11px;" aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item text-white" routerLink="/doc-types">Acceptance Test Procedure (12)</a>
+              <a class="dropdown-item text-white" routerLink="/doc-types">Component Maint Manual (3)</a>
+              <a class="dropdown-item text-white" routerLink="/doc-types">Outline/Wiring Diagram (6)</a>
+            </div>
+          </div>
+      </li>
+
+        
+        <li><button *ngIf="loginService.isUserLoggedIn()" type="button" class="btn btn-link">Service Information Letters</button></li>
+
+        <li><a *ngIf="!loginService.isUserLoggedIn()" routerLink="/login" class="nav-link"><i class="fa fa-user-circle text-secondary" style="font-size:20px"></i>&nbsp;Login</a></li>
+        <li><a *ngIf="loginService.isUserLoggedIn()" routerLink="/logout" class="nav-link"><span><i class="text-secondary fa fa-user-circle" style="font-size:20px"></i>&nbsp;LogOut</span></a></li>
+      </ul>
+    </span>
+  </div>-->  
+<!--</div>-->
+<!--</nav>    
+</div>-->
+<!--</div>-->
+
+
+
+
+
+
+
+
+
 
 <router-outlet></router-outlet>
