@@ -1,0 +1,73 @@
+<br><br>
+<div class="container">
+    <h3> SK-10-SkyEngine</h3>
+        <!--<caption>Product: &nbsp;&nbsp;{{product.name}}</caption>-->
+    <br>
+    <div class="row">
+        <div class="col-sm-8">
+          <table class="table table-bordered table-sm table-hover">
+          <thead class="thead-primary">
+            <tr>
+              <th style="font-size: 12px" scope="col">Product ID:</th>
+              <th style="font-size: 12px" scope="col">Description:</th>
+              <th style="font-size: 12px" scope="col">Item Price:</th>
+            </tr>
+          </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        SK-10-SkyEngine
+                    </td>
+                    <td>
+                        Small left-wing engine
+                    </td>
+                    <td>
+                        $32000.00
+                    </td>
+                </tr>
+            </tbody>
+            </table>
+            <div class="row">
+                <div class="form-group" style="margin-left: 15px;">
+                  <strong style="font-size: 12px;" for="password">Terms and conditions:</strong>
+                  <div style="width:360px;height:80px;overflow:scroll;padding-left:20px;background-color:rgb(238, 236, 217);color:#714D03;border:4px double #DEBB07;font-size: 10px">
+                      <p>Introduction:<br>
+                          These Website Standard Terms And Conditions (these "Terms" or these "Website Standard Terms") contained herein on this webpage, shall govern your use of this website, 
+                          including all pages within this website (collectively referred to herein below as this "Website"). These Terms apply in full force and effect to your use of this Website
+                          and by using this Website, you expressly accept all terms and conditions contained herein in full. You must not use this Website, if you have any objection to any of these
+                          Website Standard Terms And Conditions. This website is not for use by any minors (defined as those who are not at least 18 years of age), and you must not use this Website
+                          if you are a minor. 
+                      </p>
+                  </div><br>
+                </div>
+            </div>
+
+            <!--<label class="form-check-label" style="margin-top: 20px;">
+                <span style="margin-left:40px; color:red"><input type="checkbox" class="form-check-input" value="1">&nbsp;<small>Accept</small></span><br>    
+            </label>
+            <span style="margin-left: 20px">
+                <button (click)="onPrintInvoice()" type="button" class="btn btn-success" style="box-shadow: 0px 8px 16px 0px rgba(14, 13, 13, 0.342); color:mintcream; font-size: 16px"><small>Print Invoice</small></button>
+            </span><br>-->
+
+
+            <input type="checkbox" [(ngModel)]="agree">&nbsp;I agree to Terms and Conditions
+            <div>
+                <input type="checkbox" [(ngModel)]="sib" name="sib" value="male">&nbsp;Enable (SIB) Service Infromation Bulletin<br/>
+                <!--<input type="radio" [(ngModel)]="gender" name="gender" value="female">Female-->
+            </div><br>
+            <a href="../../assets/sils-cross-ref/B012016-1.pdf">
+                <input class="btn btn-primary" style="box-shadow: 0px 8px 16px 0px rgba(14, 13, 13, 0.342); color:mintcream; font-size: 16px" type="button" [disabled]="!sib || !agree" text="go" value="Service Information Bulletin" (click)="btnClick()">
+            </a><br><br>
+            <!--<a href="../../assets/sils-cross-ref/B012016-1.pdf">
+                <input class="btn btn-primary" style="box-shadow: 0px 8px 16px 0px rgba(14, 13, 13, 0.342); color:mintcream; font-size: 16px" type="button" [disabled]="!agree" text="go" value="Service Information Bulletin" (click)="btnClick()">
+            </a>-->
+        </div>  
+        <div class="col-sm-4">
+            <img src="../../assets/sky-tec-starter-200.png" alt="Logo" style="margin-left:100px; width:200px"><br><br>
+        </div>
+        <div class="text-center">
+            <label>SIB: SK-10-SkyEngine</label>
+        </div>
+    </div>
+</div>
+

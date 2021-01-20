@@ -14,7 +14,13 @@
 
         <li *ngIf="auth.isLoggedIn()">
           <button type="button" class="btn btn-primary" style="margin:5px; box-shadow: 0px 8px 16px 0px rgba(14, 13, 13, 0.342)">
-            <a routerLink="/profile" style="color:aliceblue">My Parts</a>
+            <a routerLink="/products" style="color:aliceblue">Parts List</a>
+          </button>
+        </li>
+
+        <li *ngIf="auth.isLoggedIn()">
+          <button type="button" class="btn btn-primary" style="margin:5px; box-shadow: 0px 8px 16px 0px rgba(14, 13, 13, 0.342)">
+            <a routerLink="/profile-table" style="color:aliceblue">My Parts</a>
           </button>
         </li>
         <li *ngIf="auth.isLoggedIn()">
@@ -24,7 +30,7 @@
         </li>
         <li *ngIf="auth.isLoggedIn()">
           <button type="button" class="btn btn-primary" style="margin:5px; box-shadow: 0px 8px 16px 0px rgba(14, 13, 13, 0.342)">
-            <a routerLink="/" style="color:aliceblue">Service Information Letters</a>
+            <a routerLink="/" style="color:aliceblue">Service Information Bulletin</a>
           </button>
         </li>
         <li *ngIf="auth.isLoggedIn()">

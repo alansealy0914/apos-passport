@@ -5,6 +5,10 @@ const orderSchema = new mongoose.Schema({
     type: String,
     required: true
   },
+  Address: {
+    type: String,
+    required: true
+  },
   busnumber: {
     type: String,
     required: true
