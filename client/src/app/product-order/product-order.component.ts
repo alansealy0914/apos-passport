@@ -18,7 +18,7 @@ import {PrintService} from '../print.service';
 
     btnClick() {
 
-      alert('Heading over to Service Information Bulletin');
+      alert('Let us Head on over to the Service Information Bulletin for this product');
     }
 
 
