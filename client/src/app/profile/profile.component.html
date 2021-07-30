@@ -14,22 +14,108 @@
     </div>
   </div>
   <div class="container">
-    <h4>Order Profile History</h4>
-    <p>Purchase order history: List of client purchase, purchase date, total items and total cost:</p><br>
+    
     <form class="form-inline">
       <div class="form-group">
         <!--<div class="input-group">
           <input class="form-control" type="text" style="box-shadow: 0px 8px 16px 0px rgba(14, 13, 13, 0.342); font-size: 14px" placeholder="Search Here" [(ngModel)]="filter">
         </div>-->
       </div>
-      &nbsp;<button type="button" class="btn btn-primary btn-md" style="box-shadow: 0px 8px 16px 0px rgba(14, 13, 13, 0.342); font-size: 14px">
+      <!--&nbsp;<button type="button" class="btn btn-primary btn-md" style="box-shadow: 0px 8px 16px 0px rgba(14, 13, 13, 0.342); font-size: 14px">
         <a routerLink="/order-history" style="color:white">Order History</a>
-      </button>
+      </button>-->
       &nbsp;<button type="button" (click)="goToCreateOrder()" class="btn btn-primary btn-md" style="box-shadow: 0px 8px 16px 0px rgba(14, 13, 13, 0.342); font-size: 14px">
         <a routerLink="/create-order" style="color:white">Create New Order</a></button>
         <!--<a routerLink="/create-order" style="color:white">Create Order</a></button>-->
     </form>
 
+
+
+
+
+
+    <br><br>
+
+    <div class="container">
+        <h4>Purchase Order Profile</h4>
+      <p>Order history: List client purchase order, purchase date, discounts.</p><br>
+
+    <table class="table bg-transparent">
+        <thead style="font-size: 12px">
+            <tr>
+                <th>Full Name</th>
+                <th>Address</th>
+                <th>BusNumber</th>
+                <th>OrderNumber</th>
+                <th>OrderDate</th>
+                <th>City</th>
+                <th>State</th>
+                <th>Zip</th>
+                <th>Discount?</th>
+            </tr>
+        </thead>
+        <tbody style="font-size: 12px">
+            <tr>
+                <td>American Airline</td>
+                <td>Georgia</td>
+                <td>AA-122</td>
+                <td>
+                    <a routerLink="/product-order">AA127-128-129-1</a>
+                </td>
+                <td>
+                    07/07/2019
+                </td>
+                <td>Atlanta</td>
+                <td>Georgia</td>
+                <td>39681-0000</td>
+                <td>Yes</td>
+            </tr>
+            <tr>
+                <td>American Airline</td>
+                <td>Georgia</td>
+                <td>AA-453</td>
+                <td>
+                    <a routerLink="/product-order">AA127-128-130-2</a>
+                </td>
+                <td>
+                    07/07/2019
+                </td>
+                <td>Macon</td>
+                <td>Georgia</td>
+                <td>39611-0000</td>
+                <td>Yes</td>
+            </tr>
+            <tr>
+                <td>American Airline</td>
+                <td>Georgia</td>
+                <td>AA-227</td>
+                <td>
+                    <a routerLink="/product-order">AA127-128-131-3</a>
+                </td>
+                <td>
+                    07/07/2019
+                </td>
+                <td>Savannah</td>
+                <td>Georgia</td>
+                <td>39647-0000</td>
+                <td>Yes</td>
+            </tr>
+            
+            <!--<tr *ngFor="let customer of customers | filter:filter | paginate: { itemsPerPage: 3, currentPage: p }; let i = index">
+                <td><a [routerLink]="['/customers', customer.id]">{{customer.fullName}}</a></td>
+                <td>{{customer.address1}}</td>
+                <td>{{customer.address2}}</td>
+                <td>{{customer.customer.id}}</td>
+                <td>{{customer.city}}</td>
+                <td>{{customer.state}}</td>
+                <td>{{customer.zip}}</td>
+                <td>{{customer.getsDiscount ? 'Yes':'No'}}</td>
+            </tr>-->
+        </tbody>
+    </table>
+    <!--<small><pagination-controls (pageChange)="p = $event"></pagination-controls></small>-->
+
+</div>
 
 
 
