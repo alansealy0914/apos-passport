@@ -2,7 +2,7 @@
 <div class="container">
   <div class="row">
     <div class="col-md-6">
-      <h3 class="form-signin-heading">Business Profile (BP)</h3>
+      <h3 class="form-signin-heading">Owner/Operator</h3>
       <div class="form-horizontal">
         <div class="form-group">
           <label class="col-sm-3 control-label">Client:</label>
@@ -25,8 +25,11 @@
         <a routerLink="/order-history" style="color:white">Order History</a>
       </button>-->
       &nbsp;<button type="button" (click)="goToCreateOrder()" class="btn btn-primary btn-md" style="box-shadow: 0px 8px 16px 0px rgba(14, 13, 13, 0.342); font-size: 14px">
-        <a routerLink="/create-order" style="color:white">Create New Order</a></button>
+        <a routerLink="/create-order" style="color:white">Create New Load</a></button>
         <!--<a routerLink="/create-order" style="color:white">Create Order</a></button>-->
+
+        &nbsp;<button type="button" (click)="goToCreateOrder()" class="btn btn-primary btn-md" style="box-shadow: 0px 8px 16px 0px rgba(14, 13, 13, 0.342); font-size: 14px">
+          <a routerLink="/create-order" style="color:white">Add Operator</a></button>
     </form>
 
 
@@ -37,28 +40,30 @@
     <br><br>
 
     <div class="container">
-        <h4>Purchase Order Profile</h4>
-      <p>Order history: List client purchase order, purchase date, discounts.</p><br>
+        <h4>Operator Profile</h4>
+      <p>Load history: operator status, load date, carrier manifest.</p><br>
 
     <table class="table bg-transparent">
         <thead style="font-size: 12px">
             <tr>
-                <th>Full Name</th>
+                <th>Owner/Operator</th>
                 <th>Address</th>
-                <th>BusNumber</th>
-                <th>OrderNumber</th>
+                <th>ComTag</th>
+                <th>Truck #</th>
+                <th>Load Id</th>
                 <th>OrderDate</th>
-                <th>City</th>
+                <th>Heading</th>
                 <th>State</th>
                 <th>Zip</th>
-                <th>Discount?</th>
+                <th>Status?</th>
             </tr>
         </thead>
         <tbody style="font-size: 12px">
             <tr>
-                <td>American Airline</td>
-                <td>Georgia</td>
-                <td>AA-122</td>
+                <td>Middle of the Map Trucking</td>
+                <td>Omaha, NE</td>
+                <td>MMT</td>
+                <td>MMT-NE-143</td>
                 <td>
                     <a routerLink="/product-order">AA127-128-129-1</a>
                 </td>
@@ -68,38 +73,24 @@
                 <td>Atlanta</td>
                 <td>Georgia</td>
                 <td>39681-0000</td>
-                <td>Yes</td>
+                <td style="color:forestgreen; font-size: 14px;"><strong>Active</strong></td>
             </tr>
             <tr>
-                <td>American Airline</td>
-                <td>Georgia</td>
-                <td>AA-453</td>
-                <td>
-                    <a routerLink="/product-order">AA127-128-130-2</a>
-                </td>
-                <td>
-                    07/07/2019
-                </td>
-                <td>Macon</td>
-                <td>Georgia</td>
-                <td>39611-0000</td>
-                <td>Yes</td>
-            </tr>
-            <tr>
-                <td>American Airline</td>
-                <td>Georgia</td>
-                <td>AA-227</td>
-                <td>
-                    <a routerLink="/product-order">AA127-128-131-3</a>
-                </td>
-                <td>
-                    07/07/2019
-                </td>
-                <td>Savannah</td>
-                <td>Georgia</td>
-                <td>39647-0000</td>
-                <td>Yes</td>
-            </tr>
+              <td>Middle of the Map Trucking</td>
+              <td>Omaha, NE</td>
+              <td>MMT</td>
+              <td>MMT-NE-143</td>
+              <td>
+                  <a routerLink="/product-order">OB127-188-199-8</a>
+              </td>
+              <td>
+                  07/07/2019
+              </td>
+              <td>Atlanta</td>
+              <td>Georgia</td>
+              <td>39681-0000</td>
+              <td style="color:crimson; font-size: 14px;"><strong>In-Acitve</strong></td>
+          </tr>
             
             <!--<tr *ngFor="let customer of customers | filter:filter | paginate: { itemsPerPage: 3, currentPage: p }; let i = index">
                 <td><a [routerLink]="['/customers', customer.id]">{{customer.fullName}}</a></td>
