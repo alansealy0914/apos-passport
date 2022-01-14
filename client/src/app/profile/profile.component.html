@@ -40,8 +40,8 @@
     <br><br>
 
     <div class="container">
-        <h4>Operator Profile</h4>
-      <p>Load history: operator status, load date, carrier manifest.</p><br>
+        <h4>Owner/Operator Profile</h4>
+      <p>Profile history: freight carrier, address, commercial tag, truck number, manifest, load date, location, on-demand status.</p><br>
 
     <table class="table bg-transparent">
         <thead style="font-size: 12px">
@@ -49,13 +49,13 @@
                 <th>Owner/Operator</th>
                 <th>Address</th>
                 <th>ComTag</th>
-                <th>Truck #</th>
-                <th>Load Id</th>
+                <th>TruckNumber</th>
+                <th>LoadManifest</th>
                 <th>OrderDate</th>
-                <th>Heading</th>
+                <th>Location</th>
                 <th>State</th>
                 <th>Zip</th>
-                <th>Status?</th>
+                <th>Active?</th>
             </tr>
         </thead>
         <tbody style="font-size: 12px">
@@ -73,7 +73,7 @@
                 <td>Atlanta</td>
                 <td>Georgia</td>
                 <td>39681-0000</td>
-                <td style="color:forestgreen; font-size: 14px;"><strong>Active</strong></td>
+                <td style="color:forestgreen; font-size: 14px;"><strong>true</strong></td>
             </tr>
             <tr>
               <td>Middle of the Map Trucking</td>
@@ -89,7 +89,7 @@
               <td>Atlanta</td>
               <td>Georgia</td>
               <td>39681-0000</td>
-              <td style="color:crimson; font-size: 14px;"><strong>In-Acitve</strong></td>
+              <td style="color:crimson; font-size: 14px;"><strong>false</strong></td>
           </tr>
             
             <!--<tr *ngFor="let customer of customers | filter:filter | paginate: { itemsPerPage: 3, currentPage: p }; let i = index">
