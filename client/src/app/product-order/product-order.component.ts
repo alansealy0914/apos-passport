@@ -18,7 +18,7 @@ import {PrintService} from '../print.service';
 
     btnClick() {
 
-      alert('Notification: Load manifest Service Information Bulletin (SIB) for following load ID - A123456.');
+      alert('Notification: Load the manifest Service Information Bulletin (SIB) for the following load ID - A123456.');
     }
 
 
