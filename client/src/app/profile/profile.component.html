@@ -2,10 +2,10 @@
 <div class="container">
   <div class="row">
     <div class="col-md-6">
-      <h3 class="form-signin-heading">Business Profile (BP)</h3>
+      <h3 class="form-signin-heading">User Profile</h3>
       <div class="form-horizontal">
         <div class="form-group">
-          <label class="col-sm-3 control-label">Client:</label>
+          <label class="col-sm-3 control-label">Username:</label>
           <p class="form-control-static">&nbsp;&nbsp;&nbsp;&nbsp;{{ details?.name }}<br>
           <label class="col-sm-3 control-label">Email:</label> 
           <p>&nbsp;&nbsp;&nbsp;{{ details?.email }}</p>
@@ -14,8 +14,8 @@
     </div>
   </div>
   <div class="container">
-    <h4>Order Profile History</h4>
-    <p>Purchase order history: List of client purchase, purchase date, total items and total cost:</p><br>
+    <h4>Carrier Freight Delivery</h4>
+    <p>Truck freight manifest: freight load, date, delivery, destination... </p><br>
     <form class="form-inline">
       <div class="form-group">
         <!--<div class="input-group">
@@ -23,7 +23,7 @@
         </div>-->
       </div>
       &nbsp;<button type="button" class="btn btn-primary btn-md" style="box-shadow: 0px 8px 16px 0px rgba(14, 13, 13, 0.342); font-size: 14px">
-        <a routerLink="/order-history" style="color:white">Order History</a>
+        <a routerLink="/order-history" style="color:white">Freight Carrier</a>
       </button>
       &nbsp;<button type="button" (click)="goToCreateOrder()" class="btn btn-primary btn-md" style="box-shadow: 0px 8px 16px 0px rgba(14, 13, 13, 0.342); font-size: 14px">
         <a routerLink="/create-order" style="color:white">Create New Order</a></button>
