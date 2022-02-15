@@ -7,7 +7,10 @@
         </li>
       </ul><br><br>
       <ul class="nav navbar-nav navbar-right">
-        <li *ngIf="!auth.isLoggedIn()"><a routerLink="/login">Sign in</a></li>
+        <li *ngIf="!auth.isLoggedIn()"><a routerLink="/login"><strong>Sign in</strong></a>
+          <!--<a routerLink="/login" class="btn-primary btn-small" style="box-shadow: 0px 8px 16px 0px rgba(14, 13, 13, 0.342)">Sign in</a></li>-->
+          
+        
         <!--<li *ngIf="auth.isLoggedIn()">
           <a routerLink="/profile">{{ auth.getUserDetails()?.name }}</a>
         </li>-->

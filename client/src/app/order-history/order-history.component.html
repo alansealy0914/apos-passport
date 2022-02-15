@@ -7,52 +7,56 @@
     <table class="table bg-transparent">
         <thead style="font-size: 12px">
             <tr>
-                <th>Full Name</th>
+                <th>ID</th>
+                <th>Carrier Name</th>
                 <th>Address</th>
-                <th>BusNumber</th>
-                <th>OrderNumber</th>
-                <th>City</th>
-                <th>State</th>
-                <th>Zip</th>
-                <th>Discount?</th>
+                <th>Bus Number</th> 
+                <th>Log Number</th>
+                <th>Truck Number</th>
+                <th>Time</th>
+                <th>Date</th>
+                <th>Active Status?</th>
             </tr>
         </thead>
         <tbody style="font-size: 12px">
             <tr>
-                <td>American Airline</td>
-                <td>Georgia</td>
+                <th>1001</th>
+                <td>Middle of the Map Trucking Co.</td>
+                <td>Omaha, NE</td>
                 <td>AA-122</td>
                 <td>
                     <a routerLink="/product-order">AA127-128-129-1</a>
                 </td>
-                <td>Atlanta</td>
-                <td>Georgia</td>
-                <td>39681-0000</td>
-                <td>Yes</td>
+                <td>MMT-143</td>
+                <td>22:43:20</td>
+                <td>02/12/2022</td>
+                <td>true</td>
             </tr>
             <tr>
-                <td>American Airline</td>
-                <td>Georgia</td>
-                <td>AA-453</td>
+                <th>1020</th>
+                <td>Middle of the Map Trucking Co.</td>
+                <td>Omaha, NE</td>
+                <td>AA-122</td>
                 <td>
-                    <a routerLink="/product-order">AA127-128-130-2</a>
+                    <a routerLink="/product-order">LO127-000-000-3</a>
                 </td>
-                <td>Macon</td>
-                <td>Georgia</td>
-                <td>39611-0000</td>
-                <td>Yes</td>
+                <td>MMT-1200</td>
+                <td>19:23:10</td>
+                <td>02/10/2022</td>
+                <td>true</td>
             </tr>
             <tr>
-                <td>American Airline</td>
-                <td>Georgia</td>
-                <td>AA-227</td>
+                <th>1023</th>
+                <td>Middle of the Map Trucking Co.</td>
+                <td>Omaha, NE</td>
+                <td>AA-122</td>
                 <td>
-                    <a routerLink="/product-order">AA127-128-131-3</a>
+                    <a routerLink="/product-order">BA689-892-000-6</a>
                 </td>
-                <td>Savannah</td>
-                <td>Georgia</td>
-                <td>39647-0000</td>
-                <td>Yes</td>
+                <td>MMT-1100</td>
+                <td>15:03:10</td>
+                <td>02/08/2022</td>
+                <td>true</td>
             </tr>
             
             <!--<tr *ngFor="let customer of customers | filter:filter | paginate: { itemsPerPage: 3, currentPage: p }; let i = index">
