@@ -19,9 +19,16 @@ const routes: Routes = [
   { path: "", component: HomeComponent },
   { path: "login", component: LoginComponent },
   { path: "register", component: RegisterComponent },
-  { path: "profile", component: ProfileComponent, canActivate: [AuthGuard] },
-  { path: "order-history", component: OrderHistoryComponent, canActivate: [AuthGuard] },
-  { path: "product-order", component: ProductOrderComponent, canActivate: [AuthGuard] },
+
+  { path: "profile", component: ProfileComponent },
+//{ path: "profile", component: ProfileComponent, canActivate: [AuthGuard] },
+
+  { path: "order-history", component: OrderHistoryComponent },
+  //{ path: "order-history", component: OrderHistoryComponent, canActivate: [AuthGuard] },
+
+  { path: "product-order", component: ProductOrderComponent },
+  //{ path: "product-order", component: ProductOrderComponent, canActivate: [AuthGuard] },
+  
   { path: 'print',
     outlet: 'print',
     component: PrintLayoutComponent,
@@ -29,8 +36,11 @@ const routes: Routes = [
       { path: 'invoice/:invoiceIds', component: InvoiceComponent }
     ]
   },
-  { path: "create-order", component: CreateOrderComponent, canActivate: [AuthGuard] },
-  { path: "products", component: ProductsComponent , canActivate: [AuthGuard] },
+  { path: "create-order", component: CreateOrderComponent },
+  //{ path: "create-order", component: CreateOrderComponent, canActivate: [AuthGuard] },
+
+  { path: "products", component: ProductsComponent },
+  //{ path: "products", component: ProductsComponent , canActivate: [AuthGuard] },
   
   
 ];
