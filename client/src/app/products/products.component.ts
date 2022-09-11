@@ -7,7 +7,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./products.component.css']
 })
 export class ProductsComponent implements OnInit {
-  title = 'Product Parts';
+  title = 'Product List';
   constructor(private router: Router) { }
 
   goToCreateOrder() {

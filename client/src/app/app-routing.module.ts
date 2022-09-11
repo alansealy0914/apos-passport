@@ -30,7 +30,8 @@ const routes: Routes = [
     ]
   },
   { path: "create-order", component: CreateOrderComponent, canActivate: [AuthGuard] },
-  { path: "products", component: ProductsComponent , canActivate: [AuthGuard] },
+  { path: "products", component: ProductsComponent},
+  //{ path: "products", component: ProductsComponent , canActivate: [AuthGuard] },
   
   
 ];

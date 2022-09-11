@@ -2,35 +2,43 @@
   <div class="container">
     <div id="navbar-main">
       <ul class="nav navbar-nav">
-        <li><a class="navbar-brand" routerLink="/"><img src="../../assets/plane-9931.png" alt="Logo" style="width:130px">APOS <em style="font-size: 12px;">ThunderCloud</em>&nbsp;<small>&reg;</small>
-          <br><br></a>
+        <li>
+          <a class="navbar-brand" routerLink="/">
+            <img src="../../assets/poppingcorn20224.png" alt="Logo" style="width:400px">
+        
+          </a>
         </li>
       </ul><br><br>
       <ul class="nav navbar-nav navbar-right">
-        <li *ngIf="!auth.isLoggedIn()"><a routerLink="/login">Sign in</a></li>
+        <li *ngIf="!auth.isLoggedIn()">
+          <button type="button" class="btn btn-primary" style="margin:5px; box-shadow: 0px 8px 16px 0px rgba(14, 13, 13, 0.342)">
+            <a routerLink="/login" style="color:aliceblue">Admin</a>
+          </button>
+          
+        </li>
         <!--<li *ngIf="auth.isLoggedIn()">
           <a routerLink="/profile">{{ auth.getUserDetails()?.name }}</a>
         </li>-->
 
         <li *ngIf="auth.isLoggedIn()">
           <button type="button" class="btn btn-primary" style="margin:5px; box-shadow: 0px 8px 16px 0px rgba(14, 13, 13, 0.342)">
-            <a routerLink="/products" style="color:aliceblue">Load List</a>
+            <a routerLink="/products" style="color:aliceblue">Orders List</a>
           </button>
         </li>
 
         <li *ngIf="auth.isLoggedIn()">
           <button type="button" class="btn btn-primary" style="margin:5px; box-shadow: 0px 8px 16px 0px rgba(14, 13, 13, 0.342)">
-            <a routerLink="/profile-table" style="color:aliceblue">Active Loads</a>
+            <a routerLink="/profile-table" style="color:aliceblue">Active Orders</a>
           </button>
         </li>
         <li *ngIf="auth.isLoggedIn()">
           <button type="button" class="btn btn-primary" style="margin:5px; box-shadow: 0px 8px 16px 0px rgba(14, 13, 13, 0.342)">
-            <a routerLink="/" style="color:aliceblue">Load Types</a>
+            <a routerLink="/" style="color:aliceblue">Order Types</a>
           </button>
         </li>
         <li *ngIf="auth.isLoggedIn()">
           <button type="button" class="btn btn-primary" style="margin:5px; box-shadow: 0px 8px 16px 0px rgba(14, 13, 13, 0.342)">
-            <a routerLink="/" style="color:aliceblue">Service Information Bulletin</a>
+            <a routerLink="/" style="color:aliceblue">Cart Orders</a>
           </button>
         </li>
         <li *ngIf="auth.isLoggedIn()">
@@ -42,6 +50,19 @@
       </ul>
     </div>
   </div>
+
+  <div class="container-fluid">
+    <div class="col bg-primary text-white rounded">
+      <h1 style="background-image: url(/assets/PopCornShantee.png); 
+      margin:0; padding:0; background-repeat: no-repeat; 
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover; height:100px"></h1> 
+   
+    </div>
+  </div>
+
 </div>
 
 <!---- from Navgation 

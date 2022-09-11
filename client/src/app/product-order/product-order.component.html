@@ -1,6 +1,6 @@
 <br><br>
 <div class="container">
-    <h3> SK-10-SkyEngine</h3>
+    <h3> Multi-Rainbow PopCorn Balls</h3>
         <!--<caption>Product: &nbsp;&nbsp;{{product.name}}</caption>-->
     <br>
     <div class="row">
@@ -10,19 +10,23 @@
             <tr>
               <th style="font-size: 12px" scope="col">Product ID:</th>
               <th style="font-size: 12px" scope="col">Description:</th>
+              <th style="font-size: 12px" scope="col">Count:</th>
               <th style="font-size: 12px" scope="col">Item Price:</th>
             </tr>
           </thead>
             <tbody>
                 <tr>
                     <td>
-                        SK-10-SkyEngine
+                        MR-PK6
                     </td>
                     <td>
-                        Small left-wing engine
+                        Multi-Rainbow PopCorn 6-pack
                     </td>
                     <td>
-                        $32000.00
+                        6 
+                    </td>
+                    <td>
+                        $36.99
                     </td>
                 </tr>
             </tbody>
@@ -31,12 +35,16 @@
                 <div class="form-group" style="margin-left: 15px;">
                   <strong style="font-size: 12px;" for="password">Terms and conditions:</strong>
                   <div style="width:360px;height:80px;overflow:scroll;padding-left:20px;background-color:rgb(238, 236, 217);color:#714D03;border:4px double #DEBB07;font-size: 10px">
-                      <p>Introduction:<br>
-                          These Website Standard Terms And Conditions (these "Terms" or these "Website Standard Terms") contained herein on this webpage, shall govern your use of this website, 
-                          including all pages within this website (collectively referred to herein below as this "Website"). These Terms apply in full force and effect to your use of this Website
-                          and by using this Website, you expressly accept all terms and conditions contained herein in full. You must not use this Website, if you have any objection to any of these
-                          Website Standard Terms And Conditions. This website is not for use by any minors (defined as those who are not at least 18 years of age), and you must not use this Website
-                          if you are a minor. 
+                      <p>
+                        <u><b>Refunds:</b></u><br>
+                          No refunds or exchanges within three (3) days.
+                        <br>
+                        <u><b>Fees:</b></u><br>
+                         Orders under $20.00 will require a minimum delivery fee of $5.00.
+                        <br>
+                        <u><b>Orders:</b></u><br>
+                         Orders over $20.00 may require 48 hour or moree advance notice.
+                         Popcorn Ball orders of 50 or more will require a deposit.
                       </p>
                   </div><br>
                 </div>
@@ -52,22 +60,22 @@
 
             <input type="checkbox" [(ngModel)]="agree">&nbsp;I agree to Terms and Conditions
             <div>
-                <input type="checkbox" [(ngModel)]="sib" name="sib" value="male">&nbsp;Enable (SIB) Service Infromation Bulletin<br/>
+                <input type="checkbox" [(ngModel)]="scoc" name="sib" value="male">&nbsp;Enable (SCOC) Shopping Cart Order Confirmation<br/>
                 <!--<input type="radio" [(ngModel)]="gender" name="gender" value="female">Female-->
             </div><br>
-            <a href="../../assets/sils-cross-ref/B012016-1.pdf">
-                <input class="btn btn-primary" style="box-shadow: 0px 8px 16px 0px rgba(14, 13, 13, 0.342); color:mintcream; font-size: 16px" type="button" [disabled]="!sib || !agree" text="go" value="Service Information Bulletin" (click)="btnClick()">
+            <a href="../../assets/sils-cross-ref/receipt.jpg">
+                <input class="btn btn-primary" style="box-shadow: 0px 8px 16px 0px rgba(14, 13, 13, 0.342); color:mintcream; font-size: 16px" type="button" [disabled]="!scoc || !agree" text="go" value="Shopping Cart" (click)="btnClick()">
             </a><br><br>
             <!--<a href="../../assets/sils-cross-ref/B012016-1.pdf">
                 <input class="btn btn-primary" style="box-shadow: 0px 8px 16px 0px rgba(14, 13, 13, 0.342); color:mintcream; font-size: 16px" type="button" [disabled]="!agree" text="go" value="Service Information Bulletin" (click)="btnClick()">
             </a>-->
         </div>  
         <div class="col-sm-4">
-            <img src="../../assets/sky-tec-starter-200.png" alt="Logo" style="margin-left:100px; width:200px"><br><br>
+            <img src="../../assets/PopCornShantee.png" alt="Logo" style="margin-left:100px; width:200px"><br><br>
         </div>
-        <div class="text-center">
-            <label>SIB: SK-10-SkyEngine</label>
-        </div>
+        <span style="margin-left:116px">
+            <label class="text-center">Multi-Rainbow PopCorn Balls</label>
+        </span>
     </div>
 </div>
 

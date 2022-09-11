@@ -2,7 +2,7 @@
 <div class="container">
   <div class="row">
     <div class="col-md-6">
-      <h3 class="form-signin-heading">Owner/Operator</h3>
+      <h3 class="form-signin-heading">Request/Order</h3>
       <div class="form-horizontal">
         <div class="form-group">
           <label class="col-sm-3 control-label">Client:</label>
@@ -25,11 +25,11 @@
         <a routerLink="/order-history" style="color:white">Order History</a>
       </button>-->
       &nbsp;<button type="button" (click)="goToCreateOrder()" class="btn btn-primary btn-md" style="box-shadow: 0px 8px 16px 0px rgba(14, 13, 13, 0.342); font-size: 14px">
-        <a routerLink="/create-order" style="color:white">Create New Load</a></button>
+        <a routerLink="/create-order" style="color:white">Create New Order</a></button>
         <!--<a routerLink="/create-order" style="color:white">Create Order</a></button>-->
 
         &nbsp;<button type="button" (click)="goToCreateOrder()" class="btn btn-primary btn-md" style="box-shadow: 0px 8px 16px 0px rgba(14, 13, 13, 0.342); font-size: 14px">
-          <a routerLink="/create-order" style="color:white">Add Operator</a></button>
+          <a routerLink="/create-order" style="color:white">Add Member Customer</a></button>
     </form>
 
 
@@ -40,56 +40,59 @@
     <br><br>
 
     <div class="container">
-        <h4>Operator Profile</h4>
-      <p>Load history: operator status, load date, carrier manifest.</p><br>
+        <h4>Customer Profile</h4>
+      <p>Purchase history: customer status, purchase date, order manifest.</p><br>
 
-    <table class="table bg-transparent">
+    <table class="table bg-transparent text-center">
         <thead style="font-size: 12px">
-            <tr>
-                <th>Owner/Operator</th>
-                <th>Address</th>
-                <th>ComTag</th>
-                <th>Truck #</th>
-                <th>Load Id</th>
-                <th>OrderDate</th>
-                <th>Heading</th>
-                <th>State</th>
-                <th>Zip</th>
-                <th>Status?</th>
+            <tr class="text-center">
+                <th class="text-center">Owner/Operator</th>
+                <th class="text-center">Address</th>
+                <th class="text-center">Email</th>
+                <th class="text-center">ComTag</th>
+                <th class="text-center">ProdNumber</th>
+                <th class="text-center">ProdID</th>
+                <th class="text-center">OrderDate</th>
+                <th class="text-center">GPS</th>
+                <th class="text-center">State</th>
+                <th class="text-center">Zip</th>
+                <th class="text-center">Status?</th>
             </tr>
         </thead>
         <tbody style="font-size: 12px">
-            <tr>
+            <tr class="text-center">
                 <td>Middle of the Map Trucking</td>
                 <td>Omaha, NE</td>
-                <td>MMT</td>
-                <td>MMT-NE-143</td>
+                <td>middleofmaptrucking.com</td>
+                <td>Commercial</td>
+                <td>MRB-6PK</td>
                 <td>
-                    <a routerLink="/product-order">AA127-128-129-1</a>
+                    <a routerLink="/product-order">MRB-6PK100</a>
                 </td>
                 <td>
-                    07/07/2019
+                    09/09/2022
                 </td>
                 <td>Atlanta</td>
-                <td>Georgia</td>
+                <td>GA</td>
                 <td>39681-0000</td>
-                <td style="color:forestgreen; font-size: 14px;"><strong>Active</strong></td>
+                <td style="color:crimson; font-size: 14px;"><strong>PEND</strong></td>
             </tr>
-            <tr>
-              <td>Middle of the Map Trucking</td>
-              <td>Omaha, NE</td>
-              <td>MMT</td>
-              <td>MMT-NE-143</td>
+            <tr class="text-center">
+              <td>Shantee Richardson</td>
+              <td>1234 N 65th St.</td>
+              <td>shantee@haggwear.com</td>
+              <td>Residential</td>
+              <td>SNKR-PCB</td>
               <td>
-                  <a routerLink="/product-order">OB127-188-199-8</a>
+                  <a routerLink="/product-order">SNKR-PCB-1</a>
               </td>
               <td>
-                  07/07/2019
+                  09/09/2022
               </td>
-              <td>Atlanta</td>
-              <td>Georgia</td>
-              <td>39681-0000</td>
-              <td style="color:crimson; font-size: 14px;"><strong>In-Acitve</strong></td>
+              <td>Omaha</td>
+              <td>NE</td>
+              <td>68193-0123</td>
+              <td style="color:forestgreen; font-size: 14px;"><strong>PROCESSED</strong></td>
           </tr>
             
             <!--<tr *ngFor="let customer of customers | filter:filter | paginate: { itemsPerPage: 3, currentPage: p }; let i = index">
@@ -126,3 +129,5 @@
           <label class="col-sm-2 control-label">Email</label>
           <p class="form-control-static">{{ details?.email }}</p>
         </div>-->
+
+        

@@ -11,14 +11,14 @@ import {PrintService} from '../print.service';
 //export class ProductOrderComponent implements OnInit {
   export class ProductOrderComponent {
     agree = false;
-    sib = false;
+    scoc = false;
 
     constructor(public printService: PrintService, /*private router: Router*/) { }
    
 
     btnClick() {
 
-      alert('Let us Head on over to the Service Information Bulletin for this product');
+      alert('Your order is ready to submit, please close to submit.');
     }
 
 
