@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { PrimeNGConfig } from 'primeng/api';
+
 
 @Component({
   selector: 'app-products',
@@ -8,7 +10,8 @@ import { Router } from '@angular/router';
 })
 export class ProductsComponent implements OnInit {
   title = 'Product List';
-  constructor(private router: Router) { }
+  constructor(private router: Router,
+    private primengConfig: PrimeNGConfig ) { }
 
   goToCreateOrder() {
     this.router.navigate(['/orders/create']);

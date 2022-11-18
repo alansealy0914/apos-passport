@@ -19,7 +19,7 @@ import { OrderHistoryComponent } from './order-history/order-history.component';
 import { OrdersComponent } from './orders/orders.component';
 import { ProductOrderComponent } from './product-order/product-order.component';
 import { ProductsComponent } from './products/products.component';
-
+import {DataViewModule} from 'primeng/dataview';
 
 
 @NgModule({
@@ -45,7 +45,8 @@ import { ProductsComponent } from './products/products.component';
     FormsModule, 
     HttpClientModule,
     Ng2SearchPipeModule,
-    NgxPaginationModule
+    NgxPaginationModule,
+    DataViewModule
   ],
   providers: [],
   bootstrap: [AppComponent]
